@@ -53,5 +53,11 @@
  		$this->db->where('password_pencari', $password);
  		return $this->db->get($this->nama_table)->result();
  	}
+
+ 	function cek_duplikat($nomor_handphone, $email) {
+ 		$where = "kontak_pencari='$nomor_handphone' OR email_pencari='$email'";
+ 		$this->db->where($where);
+ 		return $this->db->get($this->nama_table)->result();
+ 	}
  } 
  ?>
