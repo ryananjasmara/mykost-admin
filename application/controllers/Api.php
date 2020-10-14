@@ -73,4 +73,33 @@ class Api extends RestController {
 			], 200 );
 		}
 	}
+
+	public function tambah_iklan_post() {
+		// basic info
+		$nama_property = $this->post('nama_property');
+		$tipe_property = $this->post('tipe_property');
+		$id_pemilik = $this->post('id_pemilik');
+
+		// location info
+		$alamat_property = $this->post('alamat_property');
+		$kota_property = $this->post('kota_property');
+		$kecamatan_property = $this->post('kecamatan_property');
+		$kodepos_property = $this->post('kodepos_property');
+		$kontak_property = $this->post('kontak_property');
+
+		// geolocation
+		$latitude_property = $this->post('latitude_property');
+		$longitude_property = $this->post('longitude_property');
+
+		// detail info
+		$gender_property = $this->post('gender_property');
+		$harga_sewa_property = $this->post('harga_sewa_property');
+		$luas_unit_property = $this->post('luas_unit_property');
+		$fasilitas_property = $this->post('fasilitas_property');
+		$deskripsi_property = $this->post('deskripsi_property');
+		$jumlah_unit_property = $this->post('jumlah_unit_property');
+
+		// image
+		$image_property = $this->post('image_property');
+	}
 }
